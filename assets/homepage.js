@@ -6,7 +6,7 @@ var searchCityElement = document.getElementById('#search-city')
 var fiveDayElement = document.getElementById('#five-day')
 // make a function for the api call 
 var getWeather = function (city) {
-    var weatherApi = 'http://api.openweathermap.org/data/2.5/forecast?id=524901&appid=a0eb49cbc1c09ab59383b707bd632b2a'
+    var weatherApi = 'http://api.openweathermap.org/data/2.5/forecast?${city}&units=imerial&id=524901&appid=a0eb49cbc1c09ab59383b707bd632b2a'
     fetch(weatherApi).then(function (response) {
         return response.json()
     }).then(function(data){
