@@ -5,6 +5,16 @@ var currentWeatherElement = document.getElementById('#current-weather')
 var searchCityElement = document.getElementById('#search-city')
 var fiveDayElement = document.getElementById('#five-day')
 // make a function for the api call 
+var getWeather = function (city) {
+    var weatherApi = 'http://api.openweathermap.org/data/2.5/forecast?id=524901&appid=a0eb49cbc1c09ab59383b707bd632b2a'
+    fetch(weatherApi).then(function (response) {
+        return response.json()
+    }).then(function(data){
+        console.log(data)
+        fiveDayForecast(data)
+    })
+    console.log(response)
+}
 // make a function to call the data needed 
 // add event listeners for the btns
 // save cities searched 
