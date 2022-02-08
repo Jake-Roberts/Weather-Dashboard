@@ -4,9 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <title>Weather DashBoard</title>
 </head>
 <body>
+    <header class="container-fluid text-center text-white bg-primary p-2 ">
+        <h1>Weather DashBoard</h1>
+    </header>
+    <div class="row">
+        <div class="card">
+            <form id="search-city-form" class="card-body" >
+                <h2 class="form-lable" for="username">Search by city</h2> <br>
+                <input type="text" id="searchcity" placeholder="Search City" autofocus="true" class="form-input">
+                <button type="submit" class="btn btn-primary mb-3">Search</button>
+            </form>
+        </div>
+        <div id="current-city" class="col-5"></div>
+    </div>
+    <div class="col-9">
+        <div class="row">
+            <div class="col-11" id="curren-weather"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-12" id="five-day"></div>
+        </div>
+    </div>
     
+    <script src="./assets/homepage.js"></script>
 </body>
 </html>
